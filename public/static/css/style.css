@@ -1,0 +1,20 @@
+@CHARSET "UTF-8";
+
+body{background:#142A3D;}
+
+body .head-title{
+	font-size:70px; 
+	font-family:helvetica, serif;
+	font-weight:bold;
+	color:#D5F1E4;
+	text-align:center;
+	width:100%;
+}
+
+#main-content{
+	position:absolute;
+	margin-top:50px;
+	width:500px;
+	left:32.1%;
+}
+
