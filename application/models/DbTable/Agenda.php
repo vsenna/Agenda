@@ -26,7 +26,7 @@ class Application_Model_DbTable_Agenda extends Zend_Db_Table_Abstract
     				$select->where("'".$request['searchField']."'=?",$request['searchString']);
     				break;
     			case 'cn':
-    				$select->where($request['searchField']." like %'".$request['searchString']."%'");
+    				$select->where($request['searchField']." like '%".$request['searchString']."%'");
     				break;
     		}
     	}
@@ -66,7 +66,7 @@ class Application_Model_DbTable_Agenda extends Zend_Db_Table_Abstract
     				$select->where("'".$request['searchField']."'=?",$request['searchString']);
     				break;
     			case 'cn':
-    				$select->where($request['searchField']." like %'".$request['searchString']."%'");
+    				$select->where($request['searchField']." like '%".$request['searchString']."%'");
     				break;
     		}
     	}
