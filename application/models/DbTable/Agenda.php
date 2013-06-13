@@ -38,7 +38,6 @@ class Application_Model_DbTable_Agenda extends Zend_Db_Table_Abstract
     		print ($e);
     		exit;
     	}
-    	//print_r($request);//exit;
     	
     	//quantity
     	$count = $res['qtd'];
@@ -106,7 +105,13 @@ class Application_Model_DbTable_Agenda extends Zend_Db_Table_Abstract
     			'cellphone'		=> $request['cellphone']
     			);
     
-    	$this->insert($data);
+    	try{
+    		$this->insert($data);
+    	}
+    	catch(Exception $e){
+    		print($e);
+    		exit;
+    	}
     }
     
     /**
